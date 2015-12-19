@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="das-configuration-community-graph" default="zip" basedir=".">
+
+    <property name="project-name" value="${ant.project.name}"/>
+    <property name="target-dir" value="target"/>
+
+    <property name="Community_Graph_dir" value="Community_Graph"/>
+  
+
+    <target name="clean">
+        <delete dir="${target-dir}"/>
+    </target>
+
+    <target name="pre-configure">
+        <mkdir dir="${target-dir}"/>
+        <copy file="README.txt" todir="${target-dir}"/>
+    </target>
+
+    <target name="zip" depends="clean,pre-configure">
+        <zip destfile="${target-dir}/${Community_Graph_dir}.car">
+            <zipfileset dir="${Community_Graph_dir}"/>
+        </zip>
+    </target>
+
+</project>

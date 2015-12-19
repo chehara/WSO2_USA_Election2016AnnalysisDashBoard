@@ -1,0 +1,52 @@
+{
+  "name": "trump",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "from_user",
+      "type": "STRING"
+    },
+    {
+      "name": "text",
+      "type": "STRING"
+    },
+    {
+      "name": "user_followers_count",
+      "type": "INT"
+    },
+    {
+      "name": "user_friends_count",
+      "type": "INT"
+    },
+    {
+      "name": "retweet_count",
+      "type": "INT"
+    },
+    {
+      "name": "retweeted",
+      "type": "STRING"
+    },
+    {
+      "name": "id_str",
+      "type": "STRING"
+    },
+    {
+      "name": "hit_count",
+      "type": "INT"
+    },
+    {
+      "name": "retweeter",
+      "type": "STRING"
+    },
+    {
+      "name": "parent_text",
+      "type": "STRING"
+    },
+    {
+      "name": "timeStamp",
+      "type": "STRING"
+    }
+  ]
+}

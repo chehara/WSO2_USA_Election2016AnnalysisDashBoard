@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventReceiver name="httpReceiverCruz1" statistics="disable"
+    trace="disable" xmlns="http://wso2.org/carbon/eventreceiver">
+    <from eventAdapterType="http">
+        <property name="transports">http</property>
+    </from>
+    <mapping customMapping="enable" type="xml">
+        <property>
+            <from xpath="/jsonObject/id_str"/>
+            <to name="id_str" type="string"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/user/screen_name"/>
+            <to name="retweeter" type="string"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/retweeted_status/user/screen_name"/>
+            <to name="from_user" type="string"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/text"/>
+            <to name="text" type="string"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/retweeted_status/text"/>
+            <to name="parent_text" type="string"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/user/followers_count"/>
+            <to name="user_followers_count" type="int"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/retweeted_status/user/friends_count"/>
+            <to name="user_friends_count" type="int"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/retweeted_status/retweet_count"/>
+            <to name="retweet_count" type="int"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/retweeted_status/retweeted"/>
+            <to name="retweeted" type="string"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/retweeted_status/user/favourites_count"/>
+            <to name="hit_count" type="int"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/created_at"/>
+            <to name="timeStamp" type="string"/>
+        </property>
+    </mapping>
+    <to streamName="Cruz" version="1.0.0"/>
+</eventReceiver>

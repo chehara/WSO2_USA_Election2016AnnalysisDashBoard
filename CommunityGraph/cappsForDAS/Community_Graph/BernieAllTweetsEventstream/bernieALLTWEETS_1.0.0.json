@@ -1,0 +1,24 @@
+{
+  "name": "bernieALLTWEETS",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "from_user",
+      "type": "STRING"
+    },
+    {
+      "name": "text",
+      "type": "STRING"
+    },
+    {
+      "name": "id_str",
+      "type": "STRING"
+    },
+    {
+      "name": "timeStamp",
+      "type": "STRING"
+    }
+  ]
+}
