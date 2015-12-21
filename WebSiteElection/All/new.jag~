@@ -1,0 +1,29 @@
+<html>
+
+<title>Dagre Interactive Demo</title>
+<head>
+<script src="d3.v3.js"></script>
+<script src="graphlib-dot.js"></script>   
+<script src="dagre-d3.js"></script>
+<script type="text/javascript" src="d3/d3.tip.js" ></script>
+<script src="jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<h1>testing Get ajax</h1>
+ 
+ 
+<%
+var url  = "https://localhost:9446/analytics/tables";
+var data = { include_entities:true };
+var twitterJson = get(url, data ,"json");
+print(twitterJson);
+%>
+
+
+
+
+
+
+</body>
+
+</html>

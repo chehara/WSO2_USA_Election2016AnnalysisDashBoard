@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)http://cpettitt.github.io/project/dagre-d3/latest/demo/interactive-demo.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<title>Dagre Interactive Demo</title>
+
+
+<script src="jquery-2.1.4.min.js"></script>
+
+<body>
+<h1>testing Get ajax</h1>
+<div id="testDiv"></div>
+<script type="text/javascript" >
+	
+
+         var nodeJson ;
+         var  edgeJson;
+        
+        
+        $.ajax({
+              url: "https://10.100.4.185:9446/analytics/tables/EDGETWEETTABLE",
+              beforeSend: function(xhr) { 
+                                  xhr.setRequestHeader("Authorization","Basic YWRtaW46YWRtaW4="); 
+                            },
+              method: "GET",
+      
+             contentType: "application/json",
+             success: function(data) {
+						nodeJson = data;
+                alert(JSON.stringify(nodeJson));
+        
+                    
+        
+                 
+        }
+        });
+        
+        //-H "Authorization: Basic YWRtaW46YWRtaW4="
+        
+         
+        $.ajax({
+              url: "https://10.100.4.185:9446/analytics/tables/NODETWEETTABLE",
+              beforeSend: function(xhr) { 
+                                  xhr.setRequestHeader("Authorization","Basic YWRtaW46YWRtaW4="); 
+                            },
+              method: "GET",
+      
+             contentType: "application/json",
+             success: function(data) {
+						edgeJson = data;
+                 alert(JSON.stringify(edgeJson));
+                 
+              
+             
+        				
+                     //data1 = JSON.parse(data.message);
+        
+                 
+        }
+        });
+                    
+           nodeJson.forEach(function (d) {
+             var node = JSON.parse(d.values);
+              alert(JSON.stringify(node));
+           	
+           })
+                
+                
+                
+                
+
+
+
+
+
+            
+</script>
+
+
+</body>
+
+</html>
