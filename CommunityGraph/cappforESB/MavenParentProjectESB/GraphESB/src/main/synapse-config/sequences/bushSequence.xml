@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="bushSequence" onError="bushErrorSequence"
+  trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+  <property name="OUT_ONLY" scope="default" type="BOOLEAN" value="true"/>
+  <property name="messageType" scope="axis2" type="STRING" value="application/xml"/>
+  <log/>
+  <clone>
+    <target>
+      <endpoint>
+        <http method="post" trace="disable" uri-template="http://localhost:9766/endpoints/httpRecieverBush1/Bush"/>
+      </endpoint>
+    </target>
+    <target>
+      <endpoint>
+        <http method="post" trace="disable" uri-template="http://localhost:9766/endpoints/httpRecieverBush0/bushALLTWEETS"/>
+      </endpoint>
+    </target>
+  </clone>
+</sequence>

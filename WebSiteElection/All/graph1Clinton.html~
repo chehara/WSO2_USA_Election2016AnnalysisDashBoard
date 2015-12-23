@@ -468,7 +468,13 @@
     var svg = d3.select("body").append("svg")
             .attr("width", x)
             .attr("height", y)
+            .call(d3.behavior.zoom().scaleExtent([0, 8]).on("zoom", zoom))//------------
             .append("g");
+            //----------------
+     
+     function zoom() {
+          svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+     }
 
     function updateWindow() {
         x = w.innerWidth || e.clientWidth || g.clientWidth;
@@ -511,7 +517,7 @@
 
     var tableNodes = ["NODETWEETTABLE", "BERNIENODETWEETTABLE", "CLINTONNODETWEETTABLE"];
     var tableEdges = ["1EDGETWEETTABLE", "BERNIEEDGETWEETTABLE", "CLINTONEDGETWEETTABLE"];
-    var tableColor = ["#b35900", "#3399ff", "#548000"];
+    var tableColor = ["#3dff4f","#0042b3","#ff4533"];
     var k = 0;
     recursionLoop(k);
     
@@ -687,7 +693,8 @@
                 .style("fill", function (d) {
                     return d.color;
 
-                });
+                })
+                 .style("stroke", "#000000") ;
                 
          /*
              var padding=1;

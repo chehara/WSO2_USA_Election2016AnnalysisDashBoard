@@ -517,7 +517,7 @@
 
     var tableNodes = ["NODETWEETTABLE", "BERNIENODETWEETTABLE", "CRUZNODETWEETTABLE"];
     var tableEdges = ["1EDGETWEETTABLE", "BERNIEEDGETWEETTABLE", "CRUZEDGETWEETTABLE"];
-    var tableColor = ["#b35900", "#3399ff", "#548000"];
+    var tableColor = ["#3dff4f","#0042b3","#ff4533"];
     var k = 0;
     recursionLoop(k);
     

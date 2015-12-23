@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="reqSequence" onError="reqErrorSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+  <property name="OUT_ONLY" scope="default" type="BOOLEAN" value="true"/>
+  <property name="messageType" scope="axis2" type="STRING" value="application/xml"/>
+  <log/>
+  <send receive="send_end">
+    <endpoint>
+      <http method="post" trace="disable" uri-template="http://localhost:9763/endpoints/text/tweet"/>
+    </endpoint>
+  </send>
+</sequence>
