@@ -25,11 +25,31 @@
         <dependency artifact="httpReceiverCruz1" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="httpRecieverFiorina0" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="httpRecieverFiorina1" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
-        <dependency artifact="Sparkscripts" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
-        <dependency artifact="GadgetNationalAvgDiff" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
-        <dependency artifact="GadgetPeakUsageSEA" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
-        <dependency artifact="GadgetUsageCities" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
-        <dependency artifact="Dashboard" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreBen" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreBush" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreCruz" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreFiorina" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreTrump" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreHilery" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreBernie" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreBenALL" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreBushALL" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreCruzALL" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreFiorinaALL" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreTrumpALL" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreHileryALL" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="EventstoreBernieALL" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="SparkscriptsFirstRun" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="SparkscriptsTrump" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="SparkscriptsBernie" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="SparkscriptsHilery" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="SparkscriptsBen" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="SparkscriptsBush" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="SparkscriptsFiorina" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="SparkscriptsCruz" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="SparkscriptsBackup" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+
+
         <dependency artifact="DataPurging" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
     </artifact>
 </artifacts>

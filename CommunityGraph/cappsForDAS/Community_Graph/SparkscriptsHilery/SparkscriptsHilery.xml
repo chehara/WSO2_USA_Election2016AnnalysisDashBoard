@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Analytics>
+    <Name>SparkscriptsHilery</Name>
+    <!-- 1. Average usage (peak/off-peak) of devices metropolitan area -->
+    <!-- 2. Minimum peak-time usage of devices per house in all regions -->
+    <Script>
+        CREATE TEMPORARY TABLE tweetAccountData3 USING CarbonAnalytics OPTIONS (tableName "HILERY");
+        select from_user, retweeter, max(retweet_count) as retweets from tweetAccountData3 group by retweeter, from_user order by retweets desc;
+        create temporary table ET3 using CarbonAnalytics options (tableName "CLINTONEDGETWEETTABLE");
+        INSERT OVERWRITE table ET3 select from_user, retweeter, retweets from( select from_user, retweeter, max(retweet_count) as retweets
+        from tweetAccountData3   group by retweeter, from_user) c where retweets>10  order by  retweets desc;
+
+        create temporary table F3 using CarbonAnalytics options (tableName "FinalTable3");
+        INSERT OVERWRITE table F3  select from_user, sum(retweets) as sumOfRetweets from (select from_user, parent_text,  max(retweet_count) as retweets from tweetAccountData3 group by from_user, parent_text )a group by from_user order by sumOfRetweets desc;
+        CREATE TEMPORARY TABLE tweetData3 USING CarbonAnalytics OPTIONS (tableName "HILERYALLTWEETS");
+        create temporary table tmp3 using CarbonAnalytics options (tableName "TMP3");
+        INSERT OVERWRITE table tmp3  select from_user, count(text) as content  from tweetData3 where text NOT LIKE 'RT %' group  by from_user order by  content DESC;
+        create temporary table C3 using CarbonAnalytics options (tableName "TMP3");
+        create temporary table D3 using CarbonAnalytics options (tableName "FinalTable3");
+        create temporary table NT3 using CarbonAnalytics options (tableName "CLINTONNODETWEETTABLE");
+        INSERT OVERWRITE table NT3  select c.from_user, max(c.sumOfRetweets), max(c.content) from (Select D3.from_user , D3.sumOfRetweets,C3.content FROM D3 INNER JOIN C3 ON D3.from_user=C3.from_user  order by sumOfRetweets DESC ) c
+        INNER JOIN ET3 on c.from_user=ET3.source OR c.from_user=ET3.target group by c.from_user ;
+
+
+
+    </Script>
+    <CronExpression>0 0/60 * 1/1 * ? *</CronExpression>
+</Analytics>

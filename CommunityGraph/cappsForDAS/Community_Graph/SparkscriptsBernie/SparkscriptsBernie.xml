@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Analytics>
+    <Name>SparkscriptsBernie</Name>
+    <!-- 1. Average usage (peak/off-peak) of devices metropolitan area -->
+    <!-- 2. Minimum peak-time usage of devices per house in all regions -->
+    <Script>
+        CREATE TEMPORARY TABLE tweetAccountData2 USING CarbonAnalytics OPTIONS (tableName "BERNIE");
+        create temporary table ET2 using CarbonAnalytics options (tableName "BERNIEEDGETWEETTABLE");
+        INSERT OVERWRITE table ET2 select from_user, retweeter, retweets from( select from_user, retweeter, max(retweet_count) as retweets
+        from tweetAccountData2   group by retweeter, from_user) b where retweets>10  order by  retweets desc;
+
+        create temporary table F2 using CarbonAnalytics options (tableName "FinalTable2");
+        INSERT OVERWRITE table F2  select from_user, sum(retweets) as sumOfRetweets from (select from_user, parent_text,  max(retweet_count) as retweets from tweetAccountData2 group by from_user, parent_text )a group by from_user order by sumOfRetweets desc;
+        CREATE TEMPORARY TABLE tweetData2 USING CarbonAnalytics OPTIONS (tableName "BERNIEALLTWEETS");
+        create temporary table tmp2 using CarbonAnalytics options (tableName "TMP2");
+        INSERT OVERWRITE table tmp2  select from_user, count(text) as content  from tweetData2 where text NOT LIKE 'RT %' group  by from_user order by  content DESC;
+        create temporary table C2 using CarbonAnalytics options (tableName "TMP2");
+        create temporary table D2 using CarbonAnalytics options (tableName "FinalTable2");
+        create temporary table NT2 using CarbonAnalytics options (tableName "BERNIENODETWEETTABLE");
+        INSERT OVERWRITE table NT2  select d.from_user, max(d.sumOfRetweets), max(d.content) from (Select D2.from_user , D2.sumOfRetweets,C2.content FROM D2 INNER JOIN C2 ON D2.from_user=C2.from_user  order by sumOfRetweets DESC ) d
+        INNER JOIN ET2 on d.from_user=ET2.source OR d.from_user=ET2.target group by d.from_user ;
+
+
+
+
+    </Script>
+    <CronExpression>0 0/60 * 1/1 * ? *</CronExpression>
+</Analytics>

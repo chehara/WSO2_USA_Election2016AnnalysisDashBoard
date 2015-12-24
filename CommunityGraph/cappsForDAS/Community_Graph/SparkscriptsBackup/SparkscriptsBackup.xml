@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Analytics>
+    <Name>SparkscriptsBackup</Name>
+    <!-- 1. Average usage (peak/off-peak) of devices metropolitan area -->
+    <!-- 2. Minimum peak-time usage of devices per house in all regions -->
+    <Script>
+        CREATE TEMPORARY TABLE s1
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPTRUMPNODE");
+
+        CREATE TEMPORARY TABLE r1
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPTRUMPEDGE" );
+
+
+        CREATE TEMPORARY TABLE s2
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPBERNIENODE" );
+
+        CREATE TEMPORARY TABLE r2
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPBERNIEEDGE");
+
+        CREATE TEMPORARY TABLE s3
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPCLINTONNODE" );
+
+        CREATE TEMPORARY TABLE r3
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPCLINTONEDGE");
+
+
+        CREATE TEMPORARY TABLE NT3 USING CarbonAnalytics OPTIONS (tableName "CLINTONNODETWEETTABLE");
+        CREATE TEMPORARY TABLE NT1 USING CarbonAnalytics OPTIONS (tableName "NODETWEETTABLE");
+        CREATE TEMPORARY TABLE NT2 USING CarbonAnalytics OPTIONS (tableName "BERNIENODETWEETTABLE");
+        CREATE TEMPORARY TABLE ET1 USING CarbonAnalytics OPTIONS (tableName "1EDGETWEETTABLE" );
+        CREATE TEMPORARY TABLE ET2 USING CarbonAnalytics OPTIONS (tableName "BERNIEEDGETWEETTABLE" );
+        CREATE TEMPORARY TABLE ET3 USING CarbonAnalytics OPTIONS (tableName "CLINTONEDGETWEETTABLE" );
+
+
+        INSERT INTO TABLE s3 select name, `group`, degree, getDateTime('') from  NT3;
+        INSERT INTO TABLE s1 select name, `group`, degree, getDateTime('') from  NT1;
+        INSERT INTO TABLE s2 select name, `group`, degree, getDateTime('') from  NT2;
+        INSERT INTO TABLE r1 select source, target, value,  getDateTime('') from ET1;
+        INSERT INTO TABLE r2 select source, target, value,  getDateTime('') from ET2;
+        INSERT INTO TABLE r3 select source, target, value,  getDateTime('') from ET3;
+
+
+        CREATE TEMPORARY TABLE s4
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPBENNODE"   );
+
+        CREATE TEMPORARY TABLE r4
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPBENEDGE" );
+
+
+        CREATE TEMPORARY TABLE s5
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPCRUZNODE" );
+
+        CREATE TEMPORARY TABLE r5
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPCRUZEDGE"
+        );
+
+        CREATE TEMPORARY TABLE s6
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPBUSHNODE" );
+
+        CREATE TEMPORARY TABLE r6
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPBUSHEDGE");
+
+        CREATE TEMPORARY TABLE s7
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPFIORINANODE");
+
+        CREATE TEMPORARY TABLE r7
+        USING CarbonAnalytics
+        OPTIONS (tableName "1TEMPFIORINAEDGE" );
+
+
+        CREATE TEMPORARY TABLE NT4 USING CarbonAnalytics OPTIONS (tableName "BENNODETWEETTABLE");
+        CREATE TEMPORARY TABLE NT5 USING CarbonAnalytics OPTIONS (tableName "CRUZNODETWEETTABLE");
+        CREATE TEMPORARY TABLE NT6 USING CarbonAnalytics OPTIONS (tableName "BUSHNODETWEETTABLE");
+        CREATE TEMPORARY TABLE NT7 USING CarbonAnalytics OPTIONS (tableName "FIORINANODETWEETTABLE");
+        CREATE TEMPORARY TABLE ET4 USING CarbonAnalytics OPTIONS (tableName "BENEDGETWEETTABLE" );
+        CREATE TEMPORARY TABLE ET5 USING CarbonAnalytics OPTIONS (tableName "CRUZEDGETWEETTABLE" );
+        CREATE TEMPORARY TABLE ET6 USING CarbonAnalytics OPTIONS (tableName "BUSHEDGETWEETTABLE" );
+        CREATE TEMPORARY TABLE ET7 USING CarbonAnalytics OPTIONS (tableName "FIORINAEDGETWEETTABLE" );
+
+
+        INSERT INTO TABLE s4 select name, `group`, degree, getDateTime('') from  NT4;
+        INSERT INTO TABLE s5 select name, `group`, degree, getDateTime('') from  NT5;
+        INSERT INTO TABLE s6 select name, `group`, degree, getDateTime('') from  NT6;
+        INSERT INTO TABLE s7 select name, `group`, degree, getDateTime('') from  NT7;
+        INSERT INTO TABLE r4 select source, target, value,  getDateTime('') from ET4;
+        INSERT INTO TABLE r5 select source, target, value,  getDateTime('') from ET5;
+        INSERT INTO TABLE r6 select source, target, value,  getDateTime('') from ET6;
+        INSERT INTO TABLE r7 select source, target, value,  getDateTime('') from ET7;
+
+    </Script>
+    <CronExpression>0 45 11 * * ?</CronExpression>
+</Analytics>

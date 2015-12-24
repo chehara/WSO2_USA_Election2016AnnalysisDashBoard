@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Analytics>
+    <Name>SparkscriptsBen</Name>
+    <!-- 1. Average usage (peak/off-peak) of devices metropolitan area -->
+    <!-- 2. Minimum peak-time usage of devices per house in all regions -->
+    <Script>
+        CREATE TEMPORARY TABLE tweetAccountData4 USING CarbonAnalytics OPTIONS (tableName "BEN");
+        create temporary table ET4 using CarbonAnalytics options (tableName "BENEDGETWEETTABLE");
+        INSERT OVERWRITE table ET4 select from_user, retweeter, retweets from( select from_user, retweeter, max(retweet_count) as retweets
+        from tweetAccountData4   group by retweeter, from_user) d where retweets>10  order by  retweets desc;
+
+        create temporary table F4 using CarbonAnalytics options (tableName "FinalTable4");
+        INSERT OVERWRITE table F4  select from_user, sum(retweets) as sumOfRetweets from (select from_user, parent_text,  max(retweet_count) as retweets from tweetAccountData4 group by from_user, parent_text )a group by from_user order by sumOfRetweets desc;
+        CREATE TEMPORARY TABLE tweetData4 USING CarbonAnalytics OPTIONS (tableName "BENALLTWEETS");
+        create temporary table tmp4 using CarbonAnalytics options (tableName "TMP4");
+        INSERT OVERWRITE table tmp4  select from_user, count(text) as content  from tweetData4 where text NOT LIKE 'RT %' group  by from_user order by  content DESC;
+        create temporary table C4 using CarbonAnalytics options (tableName "TMP4");
+        create temporary table D4 using CarbonAnalytics options (tableName "FinalTable4");
+        create temporary table NT4 using CarbonAnalytics options (tableName "BENNODETWEETTABLE");
+        INSERT OVERWRITE table NT4  select d.from_user, max(d.sumOfRetweets), max(d.content) from (Select D4.from_user , D4.sumOfRetweets,C4.content FROM D4 INNER JOIN C4 ON D4.from_user=C4.from_user  order by sumOfRetweets DESC ) d
+        INNER JOIN ET4 on d.from_user=ET4.source OR d.from_user=ET4.target group by d.from_user ;
+
+
+    </Script>
+    <CronExpression>0 0/60 * 1/1 * ? *</CronExpression>
+</Analytics>

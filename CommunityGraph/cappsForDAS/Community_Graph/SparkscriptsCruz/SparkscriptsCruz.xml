@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Analytics>
+    <Name>SparkscriptsCruz</Name>
+    <!-- 1. Average usage (peak/off-peak) of devices metropolitan area -->
+    <!-- 2. Minimum peak-time usage of devices per house in all regions -->
+    <Script>
+        CREATE TEMPORARY TABLE tweetAccountData USING CarbonAnalytics OPTIONS (tableName "TRUMP");
+        select from_user, retweeter, max(retweet_count) as retweets from tweetAccountData group by retweeter, from_user order by retweets desc;
+        create temporary table ET1 using CarbonAnalytics options (tableName "1EDGETWEETTABLE");
+        INSERT OVERWRITE table ET1 select from_user,retweeter, retweets from (select  from_user, retweeter, max(retweet_count) as retweets from tweetAccountData
+        group by retweeter, from_user) b where retweets>50 order by retweets desc;
+
+
+        create temporary table FT2 using CarbonAnalytics options (tableName "FinalTable");
+        INSERT OVERWRITE table FT2  select from_user, sum(retweets) as sumOfRetweets from (select from_user, parent_text,  max(retweet_count) as retweets from tweetAccountData group by from_user, parent_text )a group by from_user order by sumOfRetweets desc;
+        CREATE TEMPORARY TABLE tweetData USING CarbonAnalytics OPTIONS (tableName "TRUMPALLTWEETS");
+        create temporary table tmp using CarbonAnalytics options (tableName "TMP1");
+        INSERT OVERWRITE table tmp  select from_user, count(text) as content  from tweetData where text NOT LIKE 'RT %' group  by from_user order by  content DESC;
+        create temporary table T1 using CarbonAnalytics options (tableName "TMP1");
+        create temporary table T2 using CarbonAnalytics options (tableName "FinalTable");
+        create temporary table NT using CarbonAnalytics options (tableName "NODETWEETTABLE");
+        INSERT OVERWRITE table NT   Select T2.from_user , T2.sumRetweets,T1.content FROM T2 INNER JOIN T1 ON T2.from_user=T1.from_user   order by sumRetweets DESC ;
+        INSERT OVERWRITE table NT  select a.from_user, max(a.sumRetweets), max(a.content) from  ( Select T2.from_user , T2.sumRetweets,T1.content FROM T2 INNER JOIN T1 ON T2.from_user=T1.from_user
+        order by sumRetweets DESC) a INNER JOIN ET1 on a.from_user=ET1.source OR a.from_user=ET1.target  group by a.from_user ;
+
+
+    </Script>
+    <CronExpression>0 15 10 ? * *</CronExpression>
+</Analytics>
