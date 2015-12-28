@@ -4,9 +4,113 @@
     <!-- 1. Average usage (peak/off-peak) of devices metropolitan area -->
     <!-- 2. Minimum peak-time usage of devices per house in all regions -->
     <Script>
-
+        CREATE TEMPORARY TABLE s1 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPTRUMPNODE", 
+         schema "name STRING, group INT, degree INT, timeUploaded STRING  ",
+         primaryKey "name, timeUploaded"
+        ); 
+        
+CREATE TEMPORARY TABLE r1 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPTRUMPEDGE", 
+         schema "source STRING, target STRING, value INT, timeUploaded STRING  ",
+        primaryKey "source, target, timeUploaded"
+        ); 
+ 
+ 
+ CREATE TEMPORARY TABLE s2 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPBERNIENODE", 
+         schema "name STRING, group INT, degree INT, timeUploaded STRING  ",
+         primaryKey "name, timeUploaded"
+        ); 
+        
+CREATE TEMPORARY TABLE r2 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPBERNIEEDGE", 
+         schema "source STRING, target STRING, value INT, timeUploaded STRING  ",
+         primaryKey "source, target, timeUploaded"
+        ); 
+ 
+ CREATE TEMPORARY TABLE s3 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPCLINTONNODE", 
+         schema "name STRING, group INT, degree INT, timeUploaded STRING  ",
+         primaryKey "name, timeUploaded"
+        );
+         
+CREATE TEMPORARY TABLE r3 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPCLINTONEDGE", 
+         schema "source STRING, target STRING, value INT, timeUploaded STRING ",
+         primaryKey "source, target, timeUploaded"
+        );        
+        
+  
+CREATE TEMPORARY TABLE s4 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPBENNODE", 
+         schema "name STRING, group INT, degree INT, timeUploaded STRING  ",
+         primaryKey "name, timeUploaded"
+        ); 
+        
+CREATE TEMPORARY TABLE r4 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPBENEDGE", 
+         schema "source STRING, target STRING, value INT, timeUploaded STRING  ",
+        primaryKey "source, target, timeUploaded"
+        ); 
+ 
+ 
+ CREATE TEMPORARY TABLE s5 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPCRUZNODE", 
+         schema "name STRING, group INT, degree INT, timeUploaded STRING ",
+         primaryKey "name, timeUploaded"
+        ); 
+        
+CREATE TEMPORARY TABLE r5 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPCRUZEDGE", 
+         schema "source STRING, target STRING, value INT, timeUploaded STRING  ",
+         primaryKey "source, target, timeUploaded"
+        ); 
+ 
+ CREATE TEMPORARY TABLE s6 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPBUSHNODE", 
+         schema "name STRING, group INT, degree INT, timeUploaded STRING  ",
+         primaryKey "name, timeUploaded"
+        );
+         
+CREATE TEMPORARY TABLE r6 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPBUSHEDGE", 
+         schema "source STRING, target STRING, value INT, timeUploaded STRING  ",
+         primaryKey "source, target, timeUploaded"
+        );        
+               
+    CREATE TEMPORARY TABLE s7 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPFIORINANODE", 
+         schema "name STRING, group INT, degree INT, timeUploaded STRING  ",
+         primaryKey "name, timeUploaded"
+        );
+         
+CREATE TEMPORARY TABLE r7 
+USING CarbonAnalytics 
+OPTIONS (tableName "1TEMPFIORINAEDGE", 
+         schema "source STRING, target STRING, value INT, timeUploaded STRING  ",
+         primaryKey "source, target, timeUploaded"
+        );        
+               
+        
+        
+        
+        
 
 
     </Script>
-    <CronExpression>0 0/60 * 1/1 * ? *</CronExpression>
+    <CronExpression/>
 </Analytics>
