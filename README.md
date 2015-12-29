@@ -1,6 +1,7 @@
 # WSO2_USA_Election2016AnnalysisDashBoard
  USA Election 2016 Analyzing Dash board with top recent twitter messages, community graph of each candidate with top 2 and semantic analysis of twittes
- 
+
+Steps to configure the System. 
  1. Download WSO2 Enterprise Service Bus from http://wso2.com/products/enterprise-service-bus/ and extract to /home as <ESB_HOME>. 
  2. Download WSO2 Complex Event Processor from http://wso2.com/products/complex-event-processor/ and extract to /home as <CEP_HOME>. 
  3. Download WSO2 Data Analytic Server from http://wso2.com/products/data-analytics-server/ and extract to /home as <DAS_HOME>.
