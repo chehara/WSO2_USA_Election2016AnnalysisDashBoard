@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="PopularListInboundEP" groupId="com.example.TwitterConfiguredESB.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/PopularListInboundEP.xml</file>
+    </artifact>
+    <artifact name="benEndpoint" groupId="com.example.TwitterConfiguredESB.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/benEndpoint.xml</file>
+    </artifact>
+    <artifact name="bernieEndpoint" groupId="com.example.TwitterConfiguredESB.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/bernieEndpoint.xml</file>
+    </artifact>
+    <artifact name="bushEndpoint" groupId="com.example.TwitterConfiguredESB.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/bushEndpoint.xml</file>
+    </artifact>
+    <artifact name="cruzEndpoint" groupId="com.example.TwitterConfiguredESB.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/cruzEndpoint.xml</file>
+    </artifact>
+    <artifact name="fiorinaEndpoint" groupId="com.example.TwitterConfiguredESB.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/fiorinaEndpoint.xml</file>
+    </artifact>
+    <artifact name="hileryEndpoint" groupId="com.example.TwitterConfiguredESB.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/hileryEndpoint.xml</file>
+    </artifact>
+    <artifact name="trumpEndpoint" groupId="com.example.TwitterConfiguredESB.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/trumpEndpoint.xml</file>
+    </artifact>
+    <artifact name="PopularListSequence" groupId="com.example.TwitterConfiguredESB.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/PopularListSequence.xml</file>
+    </artifact>
+    <artifact name="benSequence" groupId="com.example.TwitterConfiguredESB.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/benSequence.xml</file>
+    </artifact>
+    <artifact name="bernieSequence" groupId="com.example.TwitterConfiguredESB.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/bernieSequence.xml</file>
+    </artifact>
+    <artifact name="bushSequence" groupId="com.example.TwitterConfiguredESB.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/bushSequence.xml</file>
+    </artifact>
+    <artifact name="cruzSequence" groupId="com.example.TwitterConfiguredESB.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/cruzSequence.xml</file>
+    </artifact>
+    <artifact name="fiorinaSequence" groupId="com.example.TwitterConfiguredESB.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/fiorinaSequence.xml</file>
+    </artifact>
+    <artifact name="hilerySequence" groupId="com.example.TwitterConfiguredESB.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/hilerySequence.xml</file>
+    </artifact>
+    <artifact name="trumpSequence" groupId="com.example.TwitterConfiguredESB.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/trumpSequence.xml</file>
+    </artifact>
+</artifacts>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example.TwitterConfiguredESB</groupId>
+  <artifactId>TwitterConfiguredESB_module</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>TwitterConfiguredESB_module</name>
+  <description>TwitterConfiguredESB_module</description>
+  <modules>
+    <module>artifacts/inbound-endpoint/PopularListInboundEP</module>
+    <module>artifacts/inbound-endpoint/benEndpoint</module>
+    <module>artifacts/inbound-endpoint/bernieEndpoint</module>
+    <module>artifacts/inbound-endpoint/bushEndpoint</module>
+    <module>artifacts/inbound-endpoint/cruzEndpoint</module>
+    <module>artifacts/inbound-endpoint/fiorinaEndpoint</module>
+    <module>artifacts/inbound-endpoint/hileryEndpoint</module>
+    <module>artifacts/inbound-endpoint/trumpEndpoint</module>
+    <module>artifacts/sequence/PopularListSequence</module>
+    <module>artifacts/sequence/benSequence</module>
+    <module>artifacts/sequence/bernieSequence</module>
+    <module>artifacts/sequence/bushSequence</module>
+    <module>artifacts/sequence/cruzSequence</module>
+    <module>artifacts/sequence/fiorinaSequence</module>
+    <module>artifacts/sequence/hilerySequence</module>
+    <module>artifacts/sequence/trumpSequence</module>
+  </modules>
+</project>
