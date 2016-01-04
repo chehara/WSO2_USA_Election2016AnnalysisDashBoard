@@ -8,7 +8,7 @@
     <parameter name="twitter.operation">filter</parameter>
     <parameter name="connection.twitter.accessSecret">GFzznPDAX3lvpZ6AWPzd4PsqEBcwxWmFV2JJV52liB9FG</parameter>
     <parameter name="interval">10</parameter>
-    <parameter name="twitter.track">#jebbush,#allinforjeb</parameter>
+    <parameter name="twitter.track">#tedcruz,#cruzcrew,#cruz2016, #makedclisten</parameter>
     <parameter name="connection.twitter.consumerKey">JCKy0JoSf4pd8OlvYlV045pPp</parameter>
     <parameter name="coordination">true</parameter>
     <parameter name="connection.twitter.accessToken">2457554256-NyWoiPzKRhw0k4vLyQ17DcDviNajtRMGCDEVM4u</parameter>
