@@ -4,21 +4,24 @@
     <!-- 1. Average usage (peak/off-peak) of devices metropolitan area -->
     <!-- 2. Minimum peak-time usage of devices per house in all regions -->
     <Script>
-        CREATE TEMPORARY TABLE tweetAccountData6 USING CarbonAnalytics OPTIONS (tableName "BUSH");
-        create temporary table ET6 using CarbonAnalytics options (tableName "BUSHEDGETWEETTABLE");
-        INSERT OVERWRITE table ET6 select from_user, retweeter, retweets from( select from_user, retweeter, max(retweet_count) as retweets
-        from tweetAccountData6   group by retweeter, from_user) f where retweets>10  order by  retweets desc;
+        CREATE TEMPORARY TABLE tweetAccountData7 USING CarbonAnalytics OPTIONS (tableName "FIORINA"); 
+        create temporary table ET7 using CarbonAnalytics options (tableName "FIORINAEDGETWEETTABLE");
+        INSERT OVERWRITE table ET7 select from_user, retweeter, retweets from( select from_user, retweeter, max(retweet_count) as retweets 
+        from tweetAccountData7   group by retweeter, from_user) f where retweets>10  order by  retweets desc;
+            
+        create temporary table F7 using CarbonAnalytics options (tableName "FinalTable7");
+        INSERT OVERWRITE table F7  select from_user, sum(retweets) as sumOfRetweets from (select from_user, parent_text,  max(retweet_count) as retweets from tweetAccountData7 group by from_user, parent_text )a group by from_user order by sumOfRetweets desc;                                 
+        CREATE TEMPORARY TABLE tweetData7 USING CarbonAnalytics OPTIONS (tableName "FIORINAALLTWEETS");                        
+        create temporary table tmp7 using CarbonAnalytics options (tableName "TMP7");                                
+        INSERT OVERWRITE table tmp7  select from_user, count(text) as content  from tweetData7 where text NOT LIKE 'RT %' group  by from_user order by  content DESC;                            
+        create temporary table C7 using CarbonAnalytics options (tableName "TMP7");  
+        create temporary table D7 using CarbonAnalytics options (tableName "FinalTable7");
+        create temporary table NT7 using CarbonAnalytics options (tableName "FIORINANODETWEETTABLE");  
+        INSERT OVERWRITE table NT7  select f.from_user, max(f.sumOfRetweets), max(f.content) from (Select D7.from_user , D7.sumOfRetweets,C7.content FROM D7 INNER JOIN C7 ON D7.from_user=C7.from_user  order by sumOfRetweets DESC ) f 
+          INNER JOIN ET7 on f.from_user=ET7.source OR f.from_user=ET7.target group by f.from_user ;    
 
-        create temporary table F6 using CarbonAnalytics options (tableName "FinalTable6");
-        INSERT OVERWRITE table F6  select from_user, sum(retweets) as sumOfRetweets from (select from_user, parent_text,  max(retweet_count) as retweets from tweetAccountData6 group by from_user, parent_text )a group by from_user order by sumOfRetweets desc;
-        CREATE TEMPORARY TABLE tweetData6 USING CarbonAnalytics OPTIONS (tableName "BUSHALLTWEETS");
-        create temporary table tmp6 using CarbonAnalytics options (tableName "TMP6");
-        INSERT OVERWRITE table tmp6  select from_user, count(text) as content  from tweetData6 where text NOT LIKE 'RT %' group  by from_user order by  content DESC;
-        create temporary table C6 using CarbonAnalytics options (tableName "TMP6");
-        create temporary table D6 using CarbonAnalytics options (tableName "FinalTable6");
-        create temporary table NT6 using CarbonAnalytics options (tableName "BUSHNODETWEETTABLE");
-        INSERT OVERWRITE table NT6  select f.from_user, max(f.sumOfRetweets), max(f.content) from (Select D6.from_user , D6.sumOfRetweets,C6.content FROM D6 INNER JOIN C6 ON D6.from_user=C6.from_user  order by sumOfRetweets DESC ) f
-        INNER JOIN ET6 on f.from_user=ET6.source OR f.from_user=ET6.target group by f.from_user ;
+                            
+                  
 
 
     </Script>
