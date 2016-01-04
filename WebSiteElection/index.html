@@ -27,6 +27,23 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/npm.js"></script>
 <script src="js/jquery-2.1.4.min.js"></script>
+<script  src="js/zoom/sylvester.src.stripped.js"></script>
+<script  src="js/zoom/purecssmatrix.js"></script>
+<script  src="js/zoom/jquery.zoomooz-anim.js"></script>
+<script src="js/zoom/jquery.zoomooz.js"></script>
+<script >
+     $(document).ready(function() {
+         $(".zoom").click(function(evt) {
+                evt.stopPropagation();
+                $(this).zoomTo();
+         });
+         $(window).click(function(evt) {
+                 evt.stopPropagation();
+                 $("body").zoomTo();
+         });
+                $("body").zoomTo();
+        });
+</script>
     <div id="wrapper">
 
         <div class="container-fluid">
@@ -101,8 +118,16 @@
                         <div class="col-xs-6 col-md-4">
                             <div style="width: 500px;" class="container">
                                 <div style="width: 500px; height: 400px; margin-right:12px;"  class="container5">
-                                    <object type="text/html" data="All/graph1Bush.html" style="width:500px; height:400px; margin:1%;">
-                                    </object>
+                                    <div id="container">
+                                 <!--   <div id="outer" class="zoom">  -->
+                                        <div id="inner" class="zoom">
+
+                                            <object type="text/html" data="All/graph1Bush.html" style=" width: 500px; height: 400px; margin:1%;">
+                                            </object>
+                                        </div>
+                                 <!--   </div> -->
+                                    </div>
+
 
                                 </div>
                             </div>

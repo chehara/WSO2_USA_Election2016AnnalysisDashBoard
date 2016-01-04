@@ -10,3 +10,26 @@ body {
  #fontGraph{
 
  }
+
+#container {
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+}
+
+#outer {
+	    width: 500px;
+        height: 400px;
+        background: #AAA none repeat scroll 0% 0%;
+        margin: 50px auto;
+        padding: 70px;
+    }
+
+#inner {
+	    width: 510px;
+        height: 400px;
+        background: #EEE none repeat scroll 0% 0%;
+        margin: 0px auto;
+        position: absolute;
+    }
+
