@@ -4,7 +4,165 @@
     <!-- 1. Average usage (peak/off-peak) of devices metropolitan area -->
     <!-- 2. Minimum peak-time usage of devices per house in all regions -->
     <Script>
-        CREATE TEMPORARY TABLE s1 
+      CREATE TEMPORARY TABLE TMP1 
+USING CarbonAnalytics 
+OPTIONS (tableName "TMP1", 
+         schema "from_user STRING, content INT "
+        );
+CREATE TEMPORARY TABLE FinalTable 
+USING CarbonAnalytics 
+OPTIONS (tableName "FinalTable", 
+         schema "from_user STRING, sumOfRetweets INT "
+        );
+        
+CREATE TEMPORARY TABLE NODETWEETTABLE
+USING CarbonAnalytics 
+OPTIONS (tableName "NODETWEETTABLE", 
+         schema "name STRING, group INT, degree INT "
+        );
+        
+CREATE TEMPORARY TABLE 1EDGETWEETTABLE
+USING CarbonAnalytics 
+OPTIONS (tableName "1EDGETWEETTABLE",  
+        schema "source STRING, target STRING, value INT "
+        );
+        
+        
+CREATE TEMPORARY TABLE TMP2 
+USING CarbonAnalytics 
+OPTIONS (tableName "TMP2", 
+         schema "from_user STRING, content INT "
+        );
+CREATE TEMPORARY TABLE FinalTable2 
+USING CarbonAnalytics 
+OPTIONS (tableName "FinalTable2", 
+         schema "from_user STRING, sumRetweets INT "
+        );
+        
+CREATE TEMPORARY TABLE BERNIENODETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "BERNIENODETWEETTABLE",
+                 schema "name STRING, group INT, degree INT "
+        );
+        
+CREATE TEMPORARY TABLE BERNIEEDGETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "BERNIEEDGETWEETTABLE",
+         schema "source STRING, target STRING, value INT "
+         );
+        
+        
+CREATE TEMPORARY TABLE TMP3 
+USING CarbonAnalytics 
+OPTIONS (tableName "TMP3", 
+         schema "from_user STRING, content INT "
+        
+        );
+CREATE TEMPORARY TABLE FinalTable3 
+USING CarbonAnalytics 
+OPTIONS (tableName "FinalTable3", 
+         schema "from_user STRING, sumRetweets INT "
+        );
+        
+CREATE TEMPORARY TABLE CLINTONNODETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "CLINTONNODETWEETTABLE", 
+         schema "name STRING, group INT, degree INT "
+        );
+        
+CREATE TEMPORARY TABLE CLINTONEDGETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "CLINTONEDGETWEETTABLE", 
+         schema "source STRING, target STRING, value INT "
+        );
+        
+CREATE TEMPORARY TABLE TMP4 
+USING CarbonAnalytics 
+OPTIONS (tableName "TMP4", 
+         schema "from_user STRING, content INT "
+        
+        );
+CREATE TEMPORARY TABLE FinalTable4 
+USING CarbonAnalytics 
+OPTIONS (tableName "FinalTable4", 
+         schema "from_user STRING, sumRetweets INT "
+        );
+        
+CREATE TEMPORARY TABLE BENNODETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "BENNODETWEETTABLE", 
+         schema "name STRING, group INT, degree INT "
+        );
+        
+CREATE TEMPORARY TABLE BENEDGETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "BENEDGETWEETTABLE", 
+         schema "source STRING, target STRING, value INT "
+        );
+
+
+
+CREATE TEMPORARY TABLE TMP5 
+USING CarbonAnalytics 
+OPTIONS (tableName "TMP5", 
+         schema "from_user STRING, content INT "
+        
+        );
+CREATE TEMPORARY TABLE FinalTable5 
+USING CarbonAnalytics 
+OPTIONS (tableName "FinalTable5", 
+         schema "from_user STRING, sumRetweets INT "
+        );
+        
+CREATE TEMPORARY TABLE CRUZNODETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "CRUZNODETWEETTABLE", 
+         schema "name STRING, group INT, degree INT "
+        );
+        
+CREATE TEMPORARY TABLE CRUZEDGETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "CRUZEDGETWEETTABLE", 
+         schema "source STRING, target STRING, value INT "
+        );
+CREATE TEMPORARY TABLE TMP6 
+USING CarbonAnalytics 
+OPTIONS (tableName "TMP6", 
+         schema "from_user STRING, content INT "
+        
+        );
+CREATE TEMPORARY TABLE FinalTable6 
+USING CarbonAnalytics 
+OPTIONS (tableName "FinalTable6", 
+         schema "from_user STRING, sumRetweets INT "
+        );
+        
+CREATE TEMPORARY TABLE BUSHNODETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "BUSHNODETWEETTABLE", 
+         schema "name STRING, group INT, degree INT "
+        );
+        
+CREATE TEMPORARY TABLE BUSHEDGETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "BUSHEDGETWEETTABLE", 
+         schema "source STRING, target STRING, value INT "
+        );
+        
+              
+CREATE TEMPORARY TABLE TMP7 
+USING CarbonAnalytics 
+OPTIONS (tableName "TMP7", 
+         schema "from_user STRING, content INT "
+        );
+CREATE TEMPORARY TABLE FinalTable7 
+USING CarbonAnalytics 
+OPTIONS (tableName "FinalTable7", 
+         schema "from_user STRING, sumRetweets INT "
+        );
+        
+CREATE TEMPORARY TABLE FIORINANODETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "FIORINANODETWEETTABLE", 
+         schema "name STRING, group INT, degree INT "
+        );
+        
+CREATE TEMPORARY TABLE FIORINAEDGETWEETTABLE USING CarbonAnalytics 
+OPTIONS (tableName "FIORINAEDGETWEETTABLE", 
+         schema "source STRING, target STRING, value INT "
+        );
+        
+        
+  CREATE TEMPORARY TABLE s1 
 USING CarbonAnalytics 
 OPTIONS (tableName "1TEMPTRUMPNODE", 
          schema "name STRING, group INT, degree INT, timeUploaded STRING  ",
@@ -105,11 +263,7 @@ OPTIONS (tableName "1TEMPFIORINAEDGE",
          primaryKey "source, target, timeUploaded"
         );        
                
-        
-        
-        
-        
-
+    
 
     </Script>
     <CronExpression/>
