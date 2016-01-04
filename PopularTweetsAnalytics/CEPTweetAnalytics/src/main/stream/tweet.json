@@ -1,0 +1,36 @@
+{
+  "name": "tweet",
+  "version": "1.0.0",
+  "nickName": "",
+  "description": "",
+  "payloadData": [
+    {
+      "name": "text",
+      "type": "STRING"
+    },
+    {
+      "name": "hashTags",
+      "type": "STRING"
+    },
+    {
+      "name": "retweet_count",
+      "type": "INT"
+    },
+    {
+      "name": "id",
+      "type": "DOUBLE"
+    },
+    {
+      "name": "created_at",
+      "type": "STRING"
+    },
+    {
+      "name": "favorite_count",
+      "type": "INT"
+    },
+    {
+      "name": "Owner",
+      "type": "STRING"
+    }
+  ]
+}

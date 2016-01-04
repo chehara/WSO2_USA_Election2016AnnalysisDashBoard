@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventReceiver name="text" statistics="disable" trace="disable" xmlns="http://wso2.org/carbon/eventreceiver">
+    <from eventAdapterType="http">
+        <property name="transports">http</property>
+    </from>
+    <mapping customMapping="enable" type="xml">
+        <property>
+            <from xpath="/jsonObject/retweeted_status/id"/>
+            <to default="0000" name="id" type="double"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/retweeted_status/text"/>
+            <to default="null" name="text" type="string"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/retweeted_status/user/name"/>
+            <to default="null" name="Owner" type="string"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/retweeted_status/created_at"/>
+            <to default="Mon Nov 16 08:50:37 +0000 1000"
+                name="created_at" type="string"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/entities/hashtags/text"/>
+            <to default="#null" name="hashTags" type="string"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/retweeted_status/favorite_count"/>
+            <to default="0" name="favorite_count" type="int"/>
+        </property>
+        <property>
+            <from xpath="/jsonObject/retweeted_status/retweet_count"/>
+            <to default="0" name="retweet_count" type="int"/>
+        </property>
+    </mapping>
+    <to streamName="tweet" version="1.0.0"/>
+</eventReceiver>

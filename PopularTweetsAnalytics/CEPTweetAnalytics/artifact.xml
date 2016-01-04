@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+                    <artifact name="text" groupId="com.example.TestAnalytics.receiver" version="1.0.0" type="event/receiver" serverRole="ComplexEventProcessor">
+        <file>src/main/receiver/text.xml</file>
+    </artifact>
+                        <artifact name="tweet" groupId="com.example.TestAnalytics.stream" version="1.0.0" type="event/stream" serverRole="ComplexEventProcessor">
+        <file>src/main/stream/tweet.json</file>
+    </artifact>
+    <artifact name="ExecutionPlan6" groupId="com.example.TestAnalytics.execution-plan" version="1.0.0" type="event/execution-plan" serverRole="ComplexEventProcessor">
+        <file>src/main/execution-plan/ExecutionPlan6.siddhiql</file>
+    </artifact>
+    </artifacts>

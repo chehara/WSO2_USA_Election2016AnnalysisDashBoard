@@ -1,0 +1,12 @@
+<%
+//(function () {
+    var db = new Database("jdbc:mysql://127.0.0.1:3306/twitterDB", "root", "sri");
+    var result = db.query("SELECT TestObj,Ft,Rt,HTag FROM Trump");
+    var data = [];
+    for (var i in result) {
+        data.push(result[i].TestObj);
+	data.push("Ft:"+result[i].Ft+"   Rt:"+result[i].Rt+"   #"+result[i].HTag);
+    }
+     print(stringify(data));
+//}());
+%>
