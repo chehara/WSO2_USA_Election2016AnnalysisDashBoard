@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sequence name="PopularListSequence" onError="reqErrorSequence"
-  trace="disable" xmlns="http://ws.apache.org/ns/synapse">
-  <property name="OUT_ONLY" scope="default" type="BOOLEAN" value="true"/>
-  <property name="messageType" scope="axis2" type="STRING" value="application/xml"/>
-  <log/>
-  <send receive="send_end"/>
+<sequence xmlns="http://ws.apache.org/ns/synapse"
+          name="PopularListSequence"
+          onError="reqErrorSequence">
+   <property name="OUT_ONLY" value="true" scope="default" type="BOOLEAN"/>
+   <property name="messageType"
+             value="application/xml"
+             scope="axis2"
+             type="STRING"/>
+   <log/>
+   <send receive="send_end">
+      <endpoint>
+         <http method="POST" uri-template="http://localhost:9763/endpoints/text/tweet"/>
+      </endpoint>
+   </send>
 </sequence>
