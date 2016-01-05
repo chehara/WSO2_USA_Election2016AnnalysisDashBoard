@@ -1,0 +1,93 @@
+CREATE TABLE TrumpPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500),rank );
+ALTER TABLE TrumpPopular ADD INDEX count (count);
+CREATE TABLE TrumpLatest(text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500),PRIMARY KEY (ID));
+
+
+CREATE TABLE ClinatonPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE ClinatonPopular ADD INDEX count (count);
+CREATE TABLE ClinatonLatest(text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500),PRIMARY KEY (ID));
+
+
+
+
+CREATE TABLE BerniePopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE BerniePopular ADD INDEX count (count);
+CREATE TABLE BernieLatest(text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500),PRIMARY KEY (ID));
+
+
+CREATE TABLE OMalleyPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE OMalleyPopular ADD INDEX count (count);
+CREATE TABLE OMalleyLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500) ,PRIMARY KEY (ID));
+
+
+CREATE TABLE BushPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE BushPopular ADD INDEX count (count);
+CREATE TABLE BushLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500) ,PRIMARY KEY (ID));
+
+
+CREATE TABLE TedPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE TedPopular ADD INDEX count (count);
+CREATE TABLE TedLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500),PRIMARY KEY (ID));
+
+
+CREATE TABLE ChrisPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE ChrisPopular ADD INDEX count (count);
+CREATE TABLE ChrisLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500) ,PRIMARY KEY (ID));
+
+
+
+CREATE TABLE CarlyPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE CarlyPopular ADD INDEX count (count);
+CREATE TABLE CarlyLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500) ,PRIMARY KEY (ID));
+
+
+CREATE TABLE JimPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE JimPopular ADD INDEX count (count);
+CREATE TABLE JimLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500),PRIMARY KEY (ID));
+
+
+CREATE TABLE LindseyPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE LindseyPopular ADD INDEX count (count);
+CREATE TABLE LindseyLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500),PRIMARY KEY (ID));
+
+
+CREATE TABLE MikePopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE MikePopular ADD INDEX count (count);
+CREATE TABLE MikeLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500) ,PRIMARY KEY (ID));
+
+
+CREATE TABLE BobbyPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE BobbyPopular ADD INDEX count (count);
+CREATE TABLE BobbyLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500),PRIMARY KEY (ID));
+
+
+CREATE TABLE JohnPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE JohnPopular ADD INDEX count (count);
+CREATE TABLE JohnLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500) ,PRIMARY KEY (ID));
+
+
+CREATE TABLE GeorgePopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE GeorgePopular ADD INDEX count (count);
+CREATE TABLE GeorgeLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500) ,PRIMARY KEY (ID));
+
+
+CREATE TABLE RandPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE RandPopular ADD INDEX count (count);
+CREATE TABLE RandLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500) ,PRIMARY KEY (ID));
+
+
+CREATE TABLE MarcoPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE MarcoPopular ADD INDEX count (count);
+CREATE TABLE MarcoLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500),PRIMARY KEY (ID));
+
+
+CREATE TABLE RickPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE RickPopular ADD INDEX count (count);
+CREATE TABLE RickLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500) ,PRIMARY KEY (ID));
+
+
+
+CREATE TABLE ScottPopular( text varchar(1000),count int,Owner varchar (100),Ft int,Rt int , HTag varchar(500));
+ALTER TABLE ScottPopular ADD INDEX count (count);
+CREATE TABLE ScottLatest( text varchar(1000),Owner varchar (100),Ft int,Rt int , HTag varchar(500),ID varchar(500) ,PRIMARY KEY (ID));
+
