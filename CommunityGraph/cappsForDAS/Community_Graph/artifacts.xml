@@ -9,20 +9,22 @@
         <dependency artifact="BernieAllTweetsEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="BushEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="BushAllTweetsEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
-        <dependency artifact="cruzEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
-        <dependency artifact="CruzAllTweetsEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
-        <dependency artifact="FiorinaEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+       <dependency artifact="CruzEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+       <dependency artifact="CruzAllTweetsEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+       <dependency artifact="FiorinaEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="FiorinaAllTweetsEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
-        <dependency artifact="httpReciever" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+       <dependency artifact="HileryEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="HileryAllTweetsEventstream" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+      <dependency artifact="httpReciever" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="httpRecieverTrumpO" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="httpRecieverBernie0" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="httpRecieverBernie1" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="httpRecieverBush0" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="httpRecieverBush1" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
-        <dependency artifact="httpRecieverBen0" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+       <dependency artifact="httpRecieverBen0" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="httpRecieverBen1" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="httpRecieverCruz0" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
-        <dependency artifact="httpReceiverCruz1" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+        <dependency artifact="httpRecieverCruz1" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="httpRecieverFiorina0" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="httpRecieverFiorina1" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
         <dependency artifact="EventstoreBen" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
@@ -50,6 +52,6 @@
         <dependency artifact="SparkscriptsBackup" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
 
 
-        <dependency artifact="DataPurging" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>
+       <!-- <dependency artifact="DataPurging" version="1.0.0" include="true" serverRole="DataAnalyticsServer"/>  -->
     </artifact>
 </artifacts>
