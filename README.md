@@ -3,10 +3,10 @@
 
 Steps to configure the System. 
 #Step A: Initial configurations
- 1. Download WSO2 Enterprise Service Bus from http://wso2.com/products/enterprise-service-bus/ and extract to /home as <ESB_HOME>. Open <ESB_HOME>/repository/conf/carbon.xml and change the offset of the server to 7 as <offset>7<offset> 
- 2. Download WSO2 Complex Event Processor from http://wso2.com/products/complex-event-processor/ and extract to /home as <CEP_HOME>. Open <CEP_HOME>/repository/conf/carbon.xml and change the offset of the server to 0 as <offset>0<offset>
- 3. Download WSO2 Data Analytic Server from http://wso2.com/products/data-analytics-server/ and extract to /home as <DAS_HOME>.Open <ESB_HOME>/repository/conf/carbon.xml and change the offset of the server to 3 as <offset>3<offset>
- 4. Download the WSO2 twitter connector from https://storepreview.wso2.com/store/assets/esbconnector/313cbd79-c183-43d2-8a6f-fb2721973ed9 and copy the jar to the <ESB_HOME>/repository/components/dropins directory in ESB.
+ 1. Download WSO2 Enterprise Service Bus from http://wso2.com/products/enterprise-service-bus/ and extract to /home as ESB_HOME. Open ESB_HOME/repository/conf/carbon.xml and change the offset of the server to 7 as <offset>7<offset> 
+ 2. Download WSO2 Complex Event Processor from http://wso2.com/products/complex-event-processor/ and extract to /home as CEP_HOME. Open CEP_HOME/repository/conf/carbon.xml and change the offset of the server to 0 as <offset>0<offset>
+ 3. Download WSO2 Data Analytic Server from http://wso2.com/products/data-analytics-server/ and extract to /home as DAS_HOME.Open ESB_HOME/repository/conf/carbon.xml and change the offset of the server to 3 as <offset>3<offset>
+ 4. Download the WSO2 twitter connector from https://storepreview.wso2.com/store/assets/esbconnector/313cbd79-c183-43d2-8a6f-fb2721973ed9 and copy the jar to the ESB_HOME/repository/components/dropins directory in ESB.
  5.  Download the https://github.com/GDRDABARERA/WSO2_USA_Election2016AnnalysisDashBoard repository.
  6. Install mysql to your local machine using the command : sudo apt-get install mysql-server mysql-client
     Start the MySQL service using the following command   : sudo /etc/init.d/mysql start
@@ -34,8 +34,8 @@ Steps to configure the System.
     
     
  #Step B: DAS configurations
- 1. Download the MySQL Java connector JAR file, and copy it to the <DAS_HOME>/repository/components/lib/ directory.
- 2. Next replace the default h2 database of DAS with the created mySQL database. Edit the default         WSO2_ANALYTICS_EVENT_STORE_DB datasource configuration in the <PRODUCT_HOME>/repository/conf/datasources/analytics-datasources.xml file as shown below.
+ 1. Download the MySQL Java connector JAR file, and copy it to the DAS_HOME/repository/components/lib/ directory.
+ 2. Next replace the default h2 database of DAS with the created mySQL database. Edit the default         WSO2_ANALYTICS_EVENT_STORE_DB datasource configuration in the DAS_HOME/repository/conf/datasources/analytics-datasources.xml file as shown below.
  
         <datasource>
             <name>WSO2_ANALYTICS_EVENT_STORE_DB</name>
@@ -58,9 +58,9 @@ Steps to configure the System.
         </datasource>
 
 
- 3. Put the jar files inside the downloaded repository->CommunityGraph->jars into the <DAS_HOME/repository/components/lib directory. 
+ 3. Put the jar files inside the downloaded repository->CommunityGraph->jars into the DAS_HOME/repository/components/lib directory. 
  4. Build the applications inside the directory cappsForDAS inside Community_graph using ant.
- 5. Now run DAS as 	sh <DAS_HOME>/bin/wso2server.sh on your command prompt and open  https://127.0.0.1:9446/carbon/ in your browser. You will get the management console. login it using password=admin and username=admin.
+ 5. Now run DAS as 	sh DAS_HOME/bin/wso2server.sh on your command prompt and open  https://127.0.0.1:9446/carbon/ in your browser. You will get the management console. login it using password=admin and username=admin.
  6. Go to Carbon Application->add and put the ant built car file in to it. DAS will configure.
  7. First run the sparkscript FirstRun mannually so that it will create necessory tables for you.
  
@@ -72,7 +72,7 @@ Steps to configure the System.
  2. Put jar files into your repository/components/dropins folder
 Download WSO2 Complex Event Processor from http://wso2.com/products/complex-event-processor/ and extract to /home as . 
  3. Now run the CEP as 
-	sh <CEP_HOME>/bin/wso2server.sh on your command prompt.
+	sh CEP_HOME/bin/wso2server.sh on your command prompt.
  4. Visit https://127.0.0.1:9443/carbon/ in your broswer and you can login it using password=admin and username=admin
  5. Goto configuration-> Datasources->Add Datasource
      Datasource Type* 	:RDBMS
@@ -87,18 +87,18 @@ Download WSO2 Complex Event Processor from http://wso2.com/products/complex-even
  And then you can test the conection. If it's ok add the data source
  6. Download the https://github.com/GDRDABARERA/WSO2_USA_Election2016AnnalysisDashBoard repository.
  7. Build the applications inside the directory CEPTweetAnalyticsCApp inside PopularTweetsAnalytics using maven.
- 8.  Now run <CEP_HOME> again as and open  https://127.0.0.1:9443/carbon/ in your browser. You will get the management console. login it using password=admin and username=admin.
+ 8.  Now run CEP_HOME again as and open  https://127.0.0.1:9443/carbon/ in your browser. You will get the management console. login it using password=admin and username=admin.
  9.  Go to Carbon Application->add and put the maven built car file in to it. CEP will configure.
  
 
  #Step D: ESB configurations
- 1. Open the directory /TwitterCollector/TwitterESBParentProject using WSO2 Studio latest version and build to make a car file.
- 2. Now run <ESB_HOME> again as and open  https://127.0.0.1:9450/carbon/ in your browser. You will get the management console. login it using password=admin and username=admin.
- 3.  Go to Carbon Application->add and put the maven built car file in to it. <ESB_HOME> will configure.
+ 1. Open the directory  /TwitterCollector/TwitterESBParentProject using WSO2 Studio latest version and build to make a car file.
+ 2. Now run ESB_HOME again as and open  https://127.0.0.1:9450/carbon/ in your browser. You will get the management console. login it using password=admin and username=admin.
+ 3.  Go to Carbon Application->add and put the maven built car file in to it. ESB_HOME will configure.
 
 
  #Step E: WebApp configurations
- 1. Put the WebSiteElection directory inside the <DAS_HOME>/repository/deployment/server/jaggeryapps.
+ 1. Put the WebSiteElection directory inside the DAS_HOME/repository/deployment/server/jaggeryapps.
  3. Run all the servers DAS_HOME, ESB_HOME and CEP_HOME.
  4. Run the URL https://localhost:9446/WebSiteElection/index.html  and you may be able to see the USA ELECTION 2016 DASH BOARD. 
  
