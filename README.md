@@ -62,7 +62,14 @@ Steps to configure the System.
  4. Build the applications inside the directory cappsForDAS inside Community_graph using ant.
  5. Now run DAS as 	sh DAS_HOME/bin/wso2server.sh on your command prompt and open  https://127.0.0.1:9446/carbon/ in your browser. You will get the management console. login it using password=admin and username=admin.
  6. Go to Carbon Application->add and put the ant built car file in to it. DAS will configure.
- 7. First run the sparkscript FirstRun mannually so that it will create necessory tables for you.
+ Open  DAS_HOME/repository/conf/analytics/spark/spark-udf-config.xml and add these lines into it.
+		<class-name>com.gdrdabarera.DateNTime</class-name>
+                <class-name>DateNTime</class-name>
+
+ Then restart again.
+
+ 7.First run the sparkscript FirstRun mannually so that it will create necessory tables for you.
+ 
  
  
   
