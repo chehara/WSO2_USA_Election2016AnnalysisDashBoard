@@ -30,6 +30,104 @@ define table BerniePopular( text string,count int,Owner string,Ft int,Rt int , H
 @From(eventtable='rdbms', datasource.name='TwDB', table.name='BernieLatest')
 define table  BernieLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
 
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='BenPopular')
+define table BenPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='BenLatest')
+define table  BenLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='OMalleyPopular')
+define table OMalleyPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='OMalleyLatest')
+define table  OMalleyLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='BushPopular')
+define table BushPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='BushLatest')
+define table  BushLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='TedPopular')
+define table TedPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='TedLatest')
+define table  TedLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='ChrisPopular')
+define table ChrisPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='ChrisLatest')
+define table  ChrisLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='CarlyPopular')
+define table CarlyPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='CarlyLatest')
+define table  CarlyLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='JimPopular')
+define table JimPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='JimLatest')
+define table  JimLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='LindseyPopular')
+define table LindseyPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='LindseyLatest')
+define table  LindseyLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='MikePopular')
+define table MikePopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='MikeLatest')
+define table  MikeLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='BobbyPopular')
+define table BobbyPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='BobbyLatest')
+define table  BobbyLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='JohnPopular')
+define table JohnPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='JohnLatest')
+define table  JohnLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='GeorgePopular')
+define table GeorgePopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='GeorgeLatest')
+define table  GeorgeLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='RandPopular')
+define table RandPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='RandLatest')
+define table  RandLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='MarcoPopular')
+define table MarcoPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='MarcoLatest')
+define table  MarcoLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='RickPopular')
+define table RickPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='RickLatest')
+define table  RickLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='ScottPopular')
+define table ScottPopular( text string,count int,Owner string,Ft int,Rt int , HTag string);
+
+@From(eventtable='rdbms', datasource.name='TwDB', table.name='ScottLatest')
+define table  ScottLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
+
+
 from TwStream[text!='null']
 select 10.0 as rank, str:replaceAll(str:replaceAll(str:replaceAll(text,"\s*@\S+:\s*",""),"\s*https:\S+\s*",""),"\s*RT\s*","") as text, hashTags ,created_at,retweet_count, favorite_count,Owner ,1 as count
 insert into temp ;
@@ -43,11 +141,11 @@ select  text, hashTags ,retweet_count, favorite_count,Owner ,ID
 insert into temp2 ;
 
 
-from temp[temp.hashTags=='Trump' or temp.hashTags=='donaldtrump' or temp.hashTags=='Trump2016' or temp.hashTags=='makeamericagreatagain']#getMax:MaxK(25,10,((2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][TrumpPopular.count == count in TrumpPopular]
+from temp[temp.hashTags=='Trump' or temp.hashTags=='donaldtrump' or temp.hashTags=='Trump2016' or temp.hashTags=='makeamericagreatagain']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][TrumpPopular.count == count in TrumpPopular]
 select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
 update TrumpPopular on TrumpPopular.count ==count;
 
-from temp[temp.hashTags=='Trump' or temp.hashTags=='donaldtrump' or temp.hashTags=='Trump2016' or temp.hashTags=='makeamericagreatagain']#getMax:MaxK(25,10,((2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(TrumpPopular.count==count in TrumpPopular)]
+from temp[temp.hashTags=='Trump' or temp.hashTags=='donaldtrump' or temp.hashTags=='Trump2016' or temp.hashTags=='makeamericagreatagain']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(TrumpPopular.count==count in TrumpPopular)]
 select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
 insert into TrumpPopular;
 
@@ -69,11 +167,11 @@ delete TrumpLatest for expired events on TrumpLatest.ID==ID ;
 
 
 
-from temp[temp.hashTags=='hillary2016' or temp.hashTags=='hillaryclinton' or temp.hashTags=='hillaryforpresident2016' or temp.hashTags=='hillaryforpresident2016']#getMax:MaxK(25,10,((2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][ClinatonPopular.count == count in ClinatonPopular]
+from temp[temp.hashTags=='hillary2016' or temp.hashTags=='hillaryclinton' or temp.hashTags=='hillaryforpresident2016' or temp.hashTags=='hillaryforpresident2016']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][ClinatonPopular.count == count in ClinatonPopular]
 select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
 update ClinatonPopular on ClinatonPopular.count ==count  ;
 
-from temp[temp.hashTags=='hillary2016' or temp.hashTags=='hillaryclinton' or temp.hashTags=='hillaryforpresident2016' or temp.hashTags=='hillaryforpresident2016']#getMax:MaxK(25,10,((2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(ClinatonPopular.count==count in ClinatonPopular)]
+from temp[temp.hashTags=='hillary2016' or temp.hashTags=='hillaryclinton' or temp.hashTags=='hillaryforpresident2016' or temp.hashTags=='hillaryforpresident2016']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(ClinatonPopular.count==count in ClinatonPopular)]
 select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
 insert into ClinatonPopular;
 
@@ -92,11 +190,11 @@ delete ClinatonLatest for expired events on ClinatonLatest.ID==ID ;
 
 
 
-from temp[temp.hashTags=='bernie2016' or temp.hashTags=='Bernie2016' or temp.hashTags=='feelthebern' or temp.hashTags=='berniesanders']#getMax:MaxK(25,10,((2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][BerniePopular.count == count in BerniePopular]
+from temp[temp.hashTags=='bernie2016' or temp.hashTags=='Bernie2016' or temp.hashTags=='feelthebern' or temp.hashTags=='berniesanders']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][BerniePopular.count == count in BerniePopular]
 select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
 update BerniePopular on BerniePopular.count ==count;
 
-from temp[temp.hashTags=='bernie2016' or temp.hashTags=='Bernie2016' or temp.hashTags=='feelthebern' or temp.hashTags=='berniesanders']#getMax:MaxK(25,10,((2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(BerniePopular.count==count in BerniePopular)]
+from temp[temp.hashTags=='bernie2016' or temp.hashTags=='Bernie2016' or temp.hashTags=='feelthebern' or temp.hashTags=='berniesanders']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(BerniePopular.count==count in BerniePopular)]
 select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
 insert into BerniePopular;
 
@@ -107,3 +205,298 @@ insert current events into BernieLatest;
 from temp2[temp.hashTags=='bernie2016' or temp.hashTags=='Bernie2016' or temp.hashTags=='feelthebern' or temp.hashTags=='berniesanders']#window.length(5) 
 select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
 delete BernieLatest for expired events on BernieLatest.ID==ID ;
+
+
+from temp[temp.hashTags=='carson' or temp.hashTags=='bencarson' or temp.hashTags=='carson2016']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][BenPopular.count == count in BenPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update BenPopular on BenPopular.count ==count;
+
+from temp[temp.hashTags=='carson' or temp.hashTags=='bencarson' or temp.hashTags=='carson2016']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(BenPopular.count==count in BenPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into BenPopular;
+
+from temp2[temp.hashTags=='carson' or temp.hashTags=='bencarson' or temp.hashTags=='carson2016']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into BenLatest;
+
+from temp2[temp.hashTags=='carson' or temp.hashTags=='bencarson' or temp.hashTags=='carson2016']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete BenLatest for expired events on BenLatest.ID==ID ;
+
+
+from temp[temp.hashTags=='scottwalker' or temp.hashTags=='walker2016' or temp.hashTags=='walker16']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][ScottPopular.count == count in ScottPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update ScottPopular on ScottPopular.count ==count;
+
+from temp[temp.hashTags=='scottwalker' or temp.hashTags=='walker2016' or temp.hashTags=='walker16']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(ScottPopular.count==count in ScottPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into ScottPopular;
+
+from temp2[temp.hashTags=='scottwalker' or temp.hashTags=='walker2016' or temp.hashTags=='walker16']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into ScottLatest;
+
+from temp2[temp.hashTags=='scottwalker' or temp.hashTags=='walker2016' or temp.hashTags=='walker16']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete ScottLatest for expired events on ScottLatest.ID==ID ;
+
+
+from temp[temp.hashTags=='santorum' or temp.hashTags=='rick2016']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][RickPopular.count == count in RickPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update RickPopular on RickPopular.count ==count;
+
+from temp[temp.hashTags=='santorum' or temp.hashTags=='rick2016']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(RickPopular.count==count in RickPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into RickPopular;
+
+from temp2[temp.hashTags=='santorum' or temp.hashTags=='rick2016']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into RickLatest;
+
+from temp2[temp.hashTags=='santorum' or temp.hashTags=='rick2016']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete RickLatest for expired events on RickLatest.ID==ID ;
+
+
+
+
+
+
+from temp[temp.hashTags=='marcorubio' or temp.hashTags=='teamrubio' or temp.hashTags=='norubio' or temp.hashTags=='rubio2016' or temp.hashTags=='studentsforrubio']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][MarcoPopular.count == count in MarcoPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update MarcoPopular on MarcoPopular.count ==count;
+
+from temp[temp.hashTags=='marcorubio' or temp.hashTags=='teamrubio' or temp.hashTags=='norubio' or temp.hashTags=='rubio2016' or temp.hashTags=='studentsforrubio']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(MarcoPopular.count==count in MarcoPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into MarcoPopular;
+
+from temp2[temp.hashTags=='marcorubio' or temp.hashTags=='teamrubio' or temp.hashTags=='norubio' or temp.hashTags=='rubio2016' or temp.hashTags=='studentsforrubio']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into MarcoLatest;
+
+from temp2[temp.hashTags=='marcorubio' or temp.hashTags=='teamrubio' or temp.hashTags=='norubio' or temp.hashTags=='rubio2016' or temp.hashTags=='studentsforrubio']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete MarcoLatest for expired events on MarcoLatest.ID==ID ;
+
+
+
+
+
+
+from temp[temp.hashTags=='randpaul' or temp.hashTags=='standwithrand' or temp.hashTags=='rand2016']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][RandPopular.count == count in RandPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update RandPopular on RandPopular.count ==count;
+
+from temp[temp.hashTags=='randpaul' or temp.hashTags=='standwithrand' or temp.hashTags=='rand2016']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(RandPopular.count==count in RandPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into RandPopular;
+
+from temp2[temp.hashTags=='randpaul' or temp.hashTags=='standwithrand' or temp.hashTags=='rand2016']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into RandLatest;
+
+from temp2[temp.hashTags=='randpaul' or temp.hashTags=='standwithrand' or temp.hashTags=='rand2016']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete RandLatest for expired events on RandLatest.ID==ID ;
+
+
+from temp[temp.hashTags=='pataki']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][GeorgePopular.count == count in GeorgePopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update GeorgePopular on GeorgePopular.count ==count;
+
+from temp[temp.hashTags=='pataki']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(GeorgePopular.count==count in GeorgePopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into GeorgePopular;
+
+from temp2[temp.hashTags=='pataki']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into GeorgeLatest;
+
+from temp2[temp.hashTags=='pataki']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete GeorgeLatest for expired events on GeorgeLatest.ID==ID ;
+
+
+
+from temp[temp.hashTags=='kasich']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][JohnPopular.count == count in JohnPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update JohnPopular on JohnPopular.count ==count;
+
+from temp[temp.hashTags=='kasich']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(JohnPopular.count==count in JohnPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into JohnPopular;
+
+from temp2[temp.hashTags=='kasich']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into JohnLatest;
+
+from temp2[temp.hashTags=='kasich']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete JohnLatest for expired events on JohnLatest.ID==ID ;
+
+
+
+from temp[temp.hashTags=='jindal']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][BobbyPopular.count == count in BobbyPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update BobbyPopular on BobbyPopular.count ==count;
+
+from temp[temp.hashTags=='jindal']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(BobbyPopular.count==count in BobbyPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into BobbyPopular;
+
+from temp2[temp.hashTags=='jindal']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into BobbyLatest;
+
+from temp2[temp.hashTags=='jindal']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete BobbyLatest for expired events on BobbyLatest.ID==ID ;
+
+
+
+from temp[temp.hashTags=='huckabee' or temp.hashTags=='imwithhuck']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][MikePopular.count == count in MikePopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update MikePopular on MikePopular.count ==count;
+
+from temp[temp.hashTags=='huckabee' or temp.hashTags=='imwithhuck']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(MikePopular.count==count in MikePopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into MikePopular;
+
+from temp2[temp.hashTags=='huckabee' or temp.hashTags=='imwithhuck']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into MikeLatest;
+
+from temp2[temp.hashTags=='huckabee' or temp.hashTags=='imwithhuck']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete MikeLatest for expired events on MikeLatest.ID==ID ;
+
+
+from temp[temp.hashTags=='lindseygraham' or temp.hashTags=='graham']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][LindseyPopular.count == count in LindseyPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update LindseyPopular on LindseyPopular.count ==count;
+
+from temp[temp.hashTags=='lindseygraham' or temp.hashTags=='graham']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(LindseyPopular.count==count in LindseyPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into LindseyPopular;
+
+from temp2[temp.hashTags=='lindseygraham' or temp.hashTags=='graham']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into LindseyLatest;
+
+from temp2[temp.hashTags=='lindseygraham' or temp.hashTags=='graham']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete LindseyLatest for expired events on LindseyLatest.ID==ID ;
+
+
+from temp[temp.hashTags=='jimgilmore' ]#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][JimPopular.count == count in JimPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update JimPopular on JimPopular.count ==count;
+
+from temp[temp.hashTags=='jimgilmore' ]#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(JimPopular.count==count in JimPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into JimPopular;
+
+from temp2[temp.hashTags=='jimgilmore' ]#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into JimLatest;
+
+from temp2[temp.hashTags=='jimgilmore' ]#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete JimLatest for expired events on JimLatest.ID==ID ;
+
+
+from temp[temp.hashTags=='carlyfiorina' or temp.hashTags=='carly2016' or temp.hashTags=='fiorina']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][CarlyPopular.count == count in CarlyPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update CarlyPopular on CarlyPopular.count ==count;
+
+from temp[temp.hashTags=='carlyfiorina' or temp.hashTags=='carly2016' or temp.hashTags=='fiorina']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(CarlyPopular.count==count in CarlyPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into CarlyPopular;
+
+from temp2[temp.hashTags=='carlyfiorina' or temp.hashTags=='carly2016' or temp.hashTags=='fiorina']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into CarlyLatest;
+
+from temp2[temp.hashTags=='carlyfiorina' or temp.hashTags=='carly2016' or temp.hashTags=='fiorina']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete CarlyLatest for expired events on CarlyLatest.ID==ID ;
+
+
+
+
+
+from temp[temp.hashTags=='chrischristie' ]#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][ChrisPopular.count == count in ChrisPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update ChrisPopular on ChrisPopular.count ==count;
+
+from temp[temp.hashTags=='chrischristie' ]#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(ChrisPopular.count==count in ChrisPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into ChrisPopular;
+
+from temp2[temp.hashTags=='chrischristie' ]#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into ChrisLatest;
+
+from temp2[temp.hashTags=='chrischristie' ]#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete ChrisLatest for expired events on ChrisLatest.ID==ID ;
+
+
+
+
+
+
+
+
+
+
+from temp[temp.hashTags=='tedcruz' or temp.hashTags=='cruzcrew' or temp.hashTags=='cruz2016' or temp.hashTags=='makedclisten']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][TedPopular.count == count in TedPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update TedPopular on TedPopular.count ==count;
+
+from temp[temp.hashTags=='tedcruz' or temp.hashTags=='cruzcrew' or temp.hashTags=='cruz2016' or temp.hashTags=='makedclisten']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(TedPopular.count==count in TedPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into TedPopular;
+
+from temp2[temp.hashTags=='tedcruz' or temp.hashTags=='cruzcrew' or temp.hashTags=='cruz2016' or temp.hashTags=='makedclisten']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into TedLatest;
+
+from temp2[temp.hashTags=='tedcruz' or temp.hashTags=='cruzcrew' or temp.hashTags=='cruz2016' or temp.hashTags=='makedclisten']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete TedLatest for expired events on TedLatest.ID==ID ;
+
+
+from temp[temp.hashTags=='jebbush' or temp.hashTags=='allinforjeb' ]#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][BushPopular.count == count in BushPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update BushPopular on BushPopular.count ==count;
+
+from temp[temp.hashTags=='jebbush' or temp.hashTags=='allinforjeb' ]#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(BushPopular.count==count in BushPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into BushPopular;
+
+from temp2[temp.hashTags=='jebbush' or temp.hashTags=='allinforjeb' ]#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into BushLatest;
+
+from temp2[temp.hashTags=='jebbush' or temp.hashTags=='allinforjeb' ]#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete BushLatest for expired events on BushLatest.ID==ID ;
+
+
+
+from temp[temp.hashTags=='omalley' or temp.hashTags=='martinomalley' or temp.hashTags=='omalley2016' or temp.hashTags=='actionsnotwords']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][OMalleyPopular.count == count in OMalleyPopular]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+update OMalleyPopular on OMalleyPopular.count ==count;
+
+from temp[temp.hashTags=='omalley' or temp.hashTags=='martinomalley' or temp.hashTags=='omalley2016' or temp.hashTags=='actionsnotwords']#getMax:MaxK(200,5,((1000+2*retweet_count+favorite_count -1)/math:power((((time:timestampInMilliseconds(time:currentTimestamp(),'yyyy-MM-dd HH:mm:ss')-time:timestampInMilliseconds(created_at,'EEE MMM dd HH:mm:ss Z yyyy'))/1000)+2),11)), text,rank,count)[text!='null'][not(OMalleyPopular.count==count in OMalleyPopular)]
+select text,Index as count,Owner, favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag
+insert into OMalleyPopular;
+
+from temp2[temp.hashTags=='omalley' or temp.hashTags=='martinomalley' or temp.hashTags=='omalley2016' or temp.hashTags=='actionsnotwords']#window.length(5)
+select text,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+insert current events into OMalleyLatest;
+
+from temp2[temp.hashTags=='omalley' or temp.hashTags=='martinomalley' or temp.hashTags=='omalley2016' or temp.hashTags=='actionsnotwords']#window.length(5) 
+select text ,Owner,favorite_count as Ft,  retweet_count  as Rt,hashTags as HTag,ID
+delete OMalleyLatest for expired events on OMalleyLatest.ID==ID ;
