@@ -61,7 +61,7 @@ Steps to configure the System.
   
  
  #Step C: CEP configurations
- 1. Configure Databases as in database configuration file(DB_Configurations.txt) in your machine
+ 1. Configure Database Tables as in database configuration file(DB_Configurations.txt) in the database which you created for DAS. (if you are not configured DAS please use this command : CREAT DATABASE Election;)
  2. Put jar files into your repository/components/dropins folder
 Download WSO2 Complex Event Processor from http://wso2.com/products/complex-event-processor/ and extract to /home as . 
  3. Now run the CEP as 
