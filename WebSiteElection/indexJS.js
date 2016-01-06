@@ -6,12 +6,12 @@ $(function(){
     var initUI = function(){
 	//alert("rrr");
        // ajaxCall();
-        setInterval(ajaxCall("#table1","server1_1.jag"), 2000);
-	setInterval(ajaxCall("#table2","server1_2.jag"), 2000);
-	setInterval(ajaxCall("#table3","server2_1.jag"), 2000);
-	setInterval(ajaxCall("#table4","server2_2.jag"), 2000);
-	setInterval(ajaxCall("#table5","server3_1.jag"), 2000);
-	setInterval(ajaxCall("#table6","server3_2.jag"), 2000);
+        setInterval(ajaxCall("#table1","serverHillary_1.jag"), 10000);
+	setInterval(ajaxCall("#table2","serverHillary_2.jag"), 10000);
+	setInterval(ajaxCall("#table3","serverTrump_1.jag"), 10000);
+	setInterval(ajaxCall("#table4","serverTrump_2.jag"), 10000);
+	setInterval(ajaxCall("#table5","serverBernie_1.jag"), 10000);
+	setInterval(ajaxCall("#table6","serverBernie_2.jag"), 10000);
 
     };
 

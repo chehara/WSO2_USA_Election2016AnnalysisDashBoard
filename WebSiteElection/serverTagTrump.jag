@@ -1,0 +1,13 @@
+<%
+//(function () {
+    var db = new Database("jdbc:mysql://127.0.0.1:3306/Election", "root", "root");
+    var result = db.query("SELECT DISTINCT HTag FROM TrumpPopular where HTag !=  '#null'");
+    var data = [];
+    var test="";
+    for (var i in result) {
+	test=test+" , #"+result[i].HTag;
+    }
+	data.push(test);
+     print(stringify(data));
+//}());
+%>

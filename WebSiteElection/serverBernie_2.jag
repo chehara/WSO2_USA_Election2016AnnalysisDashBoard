@@ -1,0 +1,12 @@
+<%
+//(function () {
+    var db = new Database("jdbc:mysql://127.0.0.1:3306/Election", "root", "root");
+    var result = db.query("SELECT text,Ft,Rt,HTag FROM BernieLatest");
+    var data = [];
+    for (var i in result) {
+        data.push(result[i].text);
+	data.push("Ft:"+result[i].Ft+"   Rt:"+result[i].Rt+"   #"+result[i].HTag);
+    }
+     print(stringify(data));
+//}());
+%>
