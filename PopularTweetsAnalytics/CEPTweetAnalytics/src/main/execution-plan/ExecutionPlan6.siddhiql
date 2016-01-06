@@ -6,6 +6,8 @@
 
 /* define streams/tables and write queries here ... */
 @Import('tweet:1.0.0')
+
+
 define stream TwStream (text string,  hashTags string, retweet_count int, id double, created_at string,favorite_count int,Owner string);
 
 define stream temp(rank double, text string,hashTags string,created_at string,retweet_count int,favorite_count int,Owner string, count int);
@@ -127,6 +129,65 @@ define table ScottPopular( text string,count int,Owner string,Ft int,Rt int , HT
 @From(eventtable='rdbms', datasource.name='TwDB', table.name='ScottLatest')
 define table  ScottLatest( text string,Owner string,Ft int,Rt int , HTag string, ID string);
 
+define trigger StartUpTrigger at 'start'; 
+
+
+from StartUpTrigger
+delete TrumpLatest on 1 ;
+
+from StartUpTrigger
+delete ClinatonLatest on 1 ;
+
+from StartUpTrigger
+delete BernieLatest on 1 ;
+
+from StartUpTrigger
+delete OMalleyLatest on 1 ;
+
+from StartUpTrigger
+delete BushLatest on 1 ;
+
+from StartUpTrigger
+delete TedLatest on 1 ;
+
+from StartUpTrigger
+delete ChrisLatest on 1 ;
+
+from StartUpTrigger
+delete CarlyLatest on 1 ;
+
+from StartUpTrigger
+delete JimLatest on 1 ;
+
+
+
+from StartUpTrigger
+delete LindseyLatest on 1 ;
+
+from StartUpTrigger
+delete MikeLatest on 1 ;
+
+from StartUpTrigger
+delete BobbyLatest on 1 ;
+
+from StartUpTrigger
+delete JohnLatest on 1 ;
+
+from StartUpTrigger
+delete GeorgeLatest on 1 ;
+
+from StartUpTrigger
+delete RandLatest on 1 ;
+
+from StartUpTrigger
+delete MarcoLatest on 1 ;
+
+from StartUpTrigger
+delete RickLatest on 1 ;
+
+
+from StartUpTrigger
+delete ScottLatest on 1 ;
 
 from TwStream[text!='null']
 select 10.0 as rank, str:replaceAll(str:replaceAll(str:replaceAll(text,"\s*@\S+:\s*",""),"\s*https:\S+\s*",""),"\s*RT\s*","") as text, hashTags ,created_at,retweet_count, favorite_count,Owner ,1 as count
