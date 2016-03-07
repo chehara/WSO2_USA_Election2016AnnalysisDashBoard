@@ -109,9 +109,4 @@ Download WSO2 Complex Event Processor from http://wso2.com/products/complex-even
  1. Put the WebSiteElection directory inside the DAS_HOME/repository/deployment/server/jaggeryapps.
  3. Run all the servers DAS_HOME, ESB_HOME and CEP_HOME.
  4. Run the URL https://localhost:9446/WebSiteElection/index.html  and you may be able to see the USA ELECTION 2016 DASH BOARD. 
-
-
-
-
-//Chehara
  
